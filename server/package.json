@@ -1,0 +1,14 @@
+{
+  "name": "grilli-backend-example",
+  "version": "1.0.0",
+  "description": "Example Express backend for handling bookings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.4",
+    "cors": "^2.8.5"
+  }
+}

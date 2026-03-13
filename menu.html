@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox Stories Cafe - Chinese Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    /* MOBILE-FIX CSS - Add this to override template issues */
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; max-width: 100%; }
+      .header { padding: 15px 0; }
+      .navbar-list { 
+        display: flex !important; 
+        overflow-x: auto; 
+        padding: 15px 0;
+        gap: 20px;
+      }
+      .navbar-list li a { 
+        white-space: nowrap; 
+        font-size: 14px; 
+        padding: 8px 12px;
+      }
+      .hero { padding: 100px 0 !important; min-height: 60vh; }
+      .hero h1 { font-size: 2.5rem !important; line-height: 1.2; }
+      .hero p { font-size: 1.1rem; }
+      .grid-list { 
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+        margin: 0 -10px;
+      }
+      .grid-list li { padding: 0 10px; }
+      .menu-card { 
+        min-height: 120px; 
+        padding: 20px; 
+        border-radius: 15px;
+      }
+      .menu-card figure { 
+        margin: -20px -20px 15px -20px; 
+        height: 120px;
+      }
+      .title-wrapper h3 { font-size: 1.1rem; margin-bottom: 5px; }
+      .title-2 { font-size: 1.3rem !important; }
+      .card-text { font-size: 0.95rem; line-height: 1.4; }
+      .btn { 
+        padding: 15px 30px !important; 
+        font-size: 1rem; 
+        min-height: 50px;
+        border-radius: 12px;
+      }
+      h3.title-1 { font-size: 1.5rem !important; margin: 40px 0 25px; }
+      .section-title { font-size: 2rem !important; }
+      .topbar { font-size: 12px; padding: 8px 0; }
+      .topbar-item { margin: 0 10px; }
+      /* Smooth scrolling */
+      html { scroll-behavior: smooth; }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem !important; }
+      .navbar-list { gap: 15px; }
+      .menu-card { padding: 15px; }
+      .title-wrapper h3 { font-size: 1rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.css">
+</head>
+<body>
+  <!-- Topbar - Mobile Optimized -->
+  <div class="topbar">
+    <div class="container">
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 11px;">
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="location-outline" style="font-size: 14px;"></ion-icon>
+          <span>Madhapur, Hyderabad</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <ion-icon name="time-outline" style="font-size: 14px;"></ion-icon>
+          <span>11AM - 11:45PM</span>
+        </div>
+        <a href="tel:+918885653460" style="display: flex; align-items: center; gap: 5px; text-decoration: none; color: inherit;">
+          <ion-icon name="call-outline" style="font-size: 14px;"></ion-icon>
+          <span>8885653460</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE-FRIENDLY HEADER -->
+  <header class="header" data-header style="padding: 10px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="./assets/images/foxstoriespic.jpeg" width="60" height="20" alt="Fox Stories Cafe" style="border-radius: 5px;">
+        <span style="margin-left: 10px; font-weight: 700; font-size: 1.2rem;">Fox Stories</span>
+      </a>
+      
+      <!-- MOBILE NAV - Horizontal Scroll -->
+      <nav class="navbar" data-navbar style="flex: 1; margin-left: 20px;">
+        <ul class="navbar-list" style="display: flex; gap: 0; overflow-x: auto; padding: 10px 0; scrollbar-width: none; -ms-overflow-style: none;">
+          <li style="flex-shrink: 0;"><a href="index.html#home" class="navbar-link hover-underline" style="padding: 8px 12px; white-space: nowrap;">Home</a></li>
+          <li style="flex-shrink: 0;"><a href="menu.html" class="navbar-link hover-underline active" style="padding: 8px 16px; white-space: nowrap; background: rgba(255,255,255,0.2); border-radius: 20px;">Menu</a></li>
+          <li style="flex-shrink: 0;"><a href="index.html#about" class="navbar-link hover-underline" style="padding: 8px 12px; white-space: nowrap;">About</a></li>
+          <li style="flex-shrink: 0;"><a href="#" class="navbar-link hover-underline" style="padding: 8px 12px; white-space: nowrap;">Chefs</a></li>
+          <li style="flex-shrink: 0;"><a href="#" class="navbar-link hover-underline" style="padding: 8px 12px; white-space: nowrap;">Contact</a></li>
+        </ul>
+        <style>
+          .navbar-list::-webkit-scrollbar { display: none; }
+        </style>
+      </nav>
+      
+      <a href="index.html#reservation" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; min-height: 44px;">Book Table</a>
+    </div>
+  </header>
+
+  <!-- Hero - Mobile Optimized -->
+  <section class="hero text-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/images/hero-slider-1.jpg'); background-size: cover; background-position: center; padding: 120px 0 80px; min-height: 60vh; display: flex; align-items: center;">
+    <div class="container">
+      <p class="label-2 section-subtitle" style="color: #fff; font-size: 1.1rem; margin-bottom: 15px;">Authentic Chinese Flavors</p>
+      <h1 class="display-1" style="color: #fff; margin-bottom: 20px;">Sizzling Wok Specials</h1>
+      <p class="body-2" style="color: #fff; max-width: 90%; margin: 0 auto 30px; font-size: 1.1rem;">Street-style Chinese from Hyderabad's best kitchen</p>
+      <a href="#menu-items" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.1rem; min-height: 56px; border-radius: 12px;">🍜 View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu Categories - PERFECT MOBILE GRID -->
+  <section class="section menu" id="menu-items" style="padding: 60px 0;">
+    <div class="container">
+      <p class="section-subtitle text-center label-2">Chinese Masterpieces</p>
+      <h2 class="headline-1 section-title text-center">Our Complete Menu</h2>
+
+      <!-- STARTERS -->
+      <h3 class="title-1 text-center" style="margin: 50px 0 30px; font-size: 1.8rem;">🍜 STARTERS</h3>
+      <ul class="grid-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 0;">
+        <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-1.png" width="100" height="100" alt="Chicken Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Chicken Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹280</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy fried chicken cubes in spicy Indo-Chinese sauce with garlic & chilies.</p>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-1.png" width="100" height="100" alt="Chicken Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Chicken Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹280</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy fried chicken cubes in spicy Indo-Chinese sauce with garlic & chilies.</p>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-1.png" width="100" height="100" alt="Chicken Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Chicken Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹280</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy fried chicken cubes in spicy Indo-Chinese sauce with garlic & chilies.</p>
+            </div>
+          </div>
+        </li> 
+         <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-1.png" width="100" height="100" alt="Chicken Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Chicken Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹280</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy fried chicken cubes in spicy Indo-Chinese sauce with garlic & chilies.</p>
+            </div>
+          </div>
+        </li>
+        <!-- Add all 20+ Chinese items exactly like above -->
+        <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-2.png" width="100" height="100" alt="Gobi Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Gobi Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹250</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy cauliflower florets tossed in tangy garlic chili sauce.</p>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-2.png" width="100" height="100" alt="Gobi Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Gobi Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹250</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy cauliflower florets tossed in tangy garlic chili sauce.</p>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-2.png" width="100" height="100" alt="Gobi Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Gobi Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹250</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy cauliflower florets tossed in tangy garlic chili sauce.</p>
+            </div>
+          </div>
+        </li> <li>
+          <div class="menu-card hover:card" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 20px; overflow: hidden;">
+            <figure class="card-banner img-holder" style="--width:100;--height:100; height: 140px; overflow: hidden; margin: 0;">
+              <img src="./assets/images/menu-2.png" width="100" height="100" alt="Gobi Manchurian" class="img-cover" style="height: 100%; width: 100%; object-fit: cover;">
+            </figure>
+            <div style="padding: 20px;">
+              <div class="title-wrapper" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                <h3 class="title-3" style="margin: 0; font-size: 1.2rem; font-weight: 700;"><a href="#" class="card-title" style="text-decoration: none; color: inherit;">Gobi Manchurian Dry</a></h3>
+                <span class="span title-2" style="font-size: 1.4rem; font-weight: 800; color: #d32f2f;">₹250</span>
+              </div>
+              <p class="card-text label-1" style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666;">Crispy cauliflower florets tossed in tangy garlic chili sauce.</p>
+            </div>
+          </div>
+        </li>
+        <!-- Continue pattern for all Chinese dishes... -->
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="text-center" style="margin: 60px 0;">
+        <a href="tel:+918885653460" class="btn btn-primary" style="padding: 20px 50px; font-size: 1.2rem; min-height: 60px; background: linear-gradient(45deg, #d32f2f, #f44336); border: none;">📞 Call to Order Now</a>
+      </div>
+
+      <p class="menu-text text-center" style="font-size: 0.9rem; color: #666; margin-top: 40px;">
+        *Prices subject to change | GST applicable | Weekends open till 3AM
+      </p>
+    </div>
+  </section>
+
+  <!-- Simple Mobile Footer -->
+  <footer style="background: #1a1a1a; color: #fff; padding: 40px 0 20px; text-align: center;">
+    <div class="container">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a href="tel:+918885653460" style="color: #fff; font-size: 1.1rem; font-weight: 700;">📞 8885653460</a>
+        <a href="https://wa.me/918885653460" style="color: #25D366; font-size: 1.1rem; font-weight: 700;">💬 WhatsApp</a>
+        <span style="font-size: 0.9rem;">Madhapur, Hyderabad</span>
+      </div>
+      <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">© 2026 Fox Stories Cafe. Serving Hyderabad's best Chinese.</p>
+    </footer>
+
+  <script>
+    // Smooth scroll for mobile
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
